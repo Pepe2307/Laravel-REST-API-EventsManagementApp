@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use App\Models\User;
 
 return new class extends Migration
 {
@@ -18,8 +19,8 @@ return new class extends Migration
             $table->string('name');
             $table->text('description')->nullable();
 
-            $table->datatime('starts_at');
-            $table->datatime('ends_at');
+            $table->dateTime('start_time');
+            $table->dateTime('end_time');
 
             $table->timestamps();
         });
